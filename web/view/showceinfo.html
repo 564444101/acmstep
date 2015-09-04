@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>
+		训练场
+	</title>
+	<?php include("header.html"); ?>
+</head>
+<body>
+	<div class="container">
+
+		<!-- navigation -->
+		<div class="row">
+			<?php include("navigation.html"); ?>
+		</div>
+
+		<!-- main content -->
+		<div class="row body_wrap">
+			<div class="body_content">
+				<div class="col-md-10 main_body">
+					<h2>Compile Error - <?php echo $codeinfo['code_id']; ?></h2>
+					<p>
+						<?php echo $codeinfo['ce_info']; ?>
+				    </p>
+				</div>
+				<div class="col-md-2 right_menu">
+					<?php include("rightmenu.html"); ?>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div class="row">
+			<?php include("footer.html"); ?>			
+		</div>
+
+	</div>
+</body>
+</html>

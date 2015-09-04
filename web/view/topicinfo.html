@@ -1,0 +1,80 @@
+<html>
+<head>
+	<title>
+		训练场
+	</title>
+	<?php include("header.html"); ?>
+</head>
+<body>
+	<div class="container">
+
+		<!-- navigation -->
+		<div class="row">
+			<?php include("navigation.html"); ?>
+		</div>
+
+		<!-- main content -->
+		<div class="row body_wrap">
+			<div class="body_content">
+				<div class="col-md-10 main_body">
+					<div class="topicinfo">
+					<div class="table-responsive">
+					<table class="table table-bordered table-striped">
+						<colgroup>
+							<col class="col-md-1">
+							<col class="col-md-1">
+							<col class="col-md-9">
+							<col class="col-md-1">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>Solved</th>
+								<th>#</th>
+								<th>Title</th>
+								<th>Ac/Sub</th>
+							</tr>
+						</thead>
+						<tbody>	 
+						<?php
+						$num = 0;
+						foreach ($problemlist as $pid => $problemName){
+							$num += 1;
+							$problemPath = U('Problem','showProblem')."&type=".$type."&type_id=".$typeid."&pid=".$pid;
+							if (empty($subnum[$pid])){
+								$acTimes = 0;
+								$subTimes = 0;
+								$acFlag = '';
+							}
+							else{
+								$acTimes = $acnum[$pid];
+								$subTimes = $subnum[$pid];
+								if ($acTimes > 0) $acFlag = "<img src='public/pic/ac.gif'>";	
+								else $acFlag = '';
+							}
+							
+							$col_1 = "<td>".$acFlag."</td>";	
+							$col_2 = "<td>".$num."</td>";
+							$col_3 = "<td style='text-align:left'><a href=".$problemPath.">".$problemName."</a></td>";
+							$col_4 = "<td>(".$acTimes." / ".$subTimes.")</td>";
+							echo "<tr>".$col_1.$col_2.$col_3.$col_4."</tr>";
+						 }   
+						?>
+						</tbody>
+						</table>  
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2 right_menu">
+					<?php include("rightmenu.html"); ?>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div class="row">
+			<?php include("footer.html"); ?>			
+		</div>
+
+	</div>
+</body>
+</html>

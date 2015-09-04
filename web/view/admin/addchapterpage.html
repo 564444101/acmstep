@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title>
+		admin
+	</title>
+		<?php include("header.html"); ?>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="header">
+				<?php include("navigation.html"); ?>
+			</div>
+		</div>
+		<div class="row">
+		  <div class="col-md-2 left_menu">
+			 <?php include("leftmenu.html"); ?>
+		  </div>
+		  <div class="col-md-10 admin_body">
+		    <div class="body_content">
+		        <form name='newchapter' role="form" action="<?php echo U('Chapter','addChapter'); ?>" 
+						method="post" style="margin-bottom: 0em;">
+					<div class="row">
+						<div class="col-md-3">
+							<label class="control-label" for="cid">章节ID</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+						<input type="text" name="cid" class="form-control"
+								placeholder="chapter id" required>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-3">
+						<label class="control-label" for="chapter_name">章节名称</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+						<input type="text" name="chapter_name" class="form-control"
+								placeholder="chapter name" required>
+						</div>
+					</div>
+
+					<p>
+					<div class="row">
+						<div class="col-md-2">
+							<button type="submit" class="btn btn-primary btn-block">OK</button>
+						</div>
+						<div class="col-md-2">
+							<button type="reset" class="btn btn-primary btn-block">Restet</button>
+						</div>
+					</div>
+					</p>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!--footer-->
+		<div class="row">
+			<?php include("footer.html"); ?>
+		</div>
+	</div>
+
+	<script language="javascript" type="text/javascript" src="public/editor/kindeditor.js"></script>
+	<script language="javascript" type="text/javascript" src="public/editor/lang/zh_CN.js"></script>
+	<script>
+		KindEditor.ready(function(K) {
+			window.editor = K.create('#description_edit');
+		});
+
+	</script>
+</body>
+</html>

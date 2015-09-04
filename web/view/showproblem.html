@@ -1,0 +1,113 @@
+<html>
+<head>
+	<title>
+		训练场
+	</title>
+	<?php include("header.html"); ?>
+</head>
+<body>
+	<div class="container">
+
+		<!-- navigation -->
+		<div class="row">
+			<?php include("navigation.html"); ?>
+		</div>
+
+		<!-- main content -->
+		<div class="row body_wrap">
+			<div class="body_content">
+				<div class="col-md-10 main_body">
+					<div class="probleminfo">
+						<h3 style="text-align:center"><?php echo $probleminfo['problem_name']; ?></h3>
+						<div class="row">
+							<span class="col-md-3 col-md-offset-3" style="text-align:right">
+								Time Limit: <?php echo $probleminfo['time_limit']; ?> ms
+							</span>
+							<span class="col-md-3">
+								Memory Limit: <?php echo $probleminfo['memory_limit']; ?> k
+							</span>
+						</div>
+						<div class="row">
+							<span class="col-md-3 col-md-offset-3" style="text-align:right">
+								Total Sub: <?php echo $probleminfo['submit_times']; ?>
+							</span>
+							<span class="col-md-3">
+								Accept: <?php echo $probleminfo['solve_times']; ?>
+							</span>
+						</div>
+
+						<h4>Problem Description</h4>		
+						<div class="problem_content">
+								<?php echo $probleminfo['description']; ?>
+						</div>
+						<h4>Input</h4>		
+						<div class="problem_content">
+								<?php echo $probleminfo['input']; ?>
+						</div>
+						<h4>Output</h4>		
+						<div class="problem_content">
+								<?php echo $probleminfo['output']; ?>
+						</div>
+						<h4>Sample Input</h4>		
+						<div class="problem_content">
+								<?php echo $probleminfo['sample_input']; ?>
+						</div>
+						<h4>Sample Output</h4>		
+						<div class="problem_content">
+								<?php echo $probleminfo['sample_output']; ?>
+						</div>
+						<?php
+					      if (!empty($probleminfo['hint'])){
+					         $head = "<h4>Hint</h4>";	
+							 $hintContent = "<div class='problem_content'>".$probleminfo['hint']."</div>";
+							 echo $head;
+							 echo $hintContent;
+						  }
+						?>
+						
+						<a href="#" data-toggle="modal" data-target='#showtip'>
+							<img alt='tip' src='public/pic/<?php if (true==$opentip) echo 'tip_open.png'; else echo 'tip_close.png';  ?>'
+							style="max-width:50;max-height:50">
+						</a>
+
+
+						<div style="padding-bottom:10px">
+							<a href="<?php echo U('Code','submitCode')."&pid=".$pid."&type=".$type."&type_id=".$type_id; ?>">
+								<button class="btn btn-primary col-md-offset-5">Submit</button>
+							</a>
+						</div>
+
+						<div class="modal fade" id="showtip" tabindex="-1" role="dialog" aria-hidden="true"> 
+							<div class="modal-dialog">
+								<div class="tip_box">
+									<h2> 锦囊 1 </h2>
+									<?php
+										if (true == $opentip){
+											$headline = "<h3>题解</h3>";
+											$tipcontent = "<div class='tip_content'>".$probleminfo['tip']."</div>";
+											echo $headline.$tipcontent;
+										} else {
+										$warning = "<div class='warning'>距离锦囊开启时间：</div>".$lasttime['d']." 天".$lasttime['h']." 小时".$lasttime['m']." 分钟".$lasttime['s']." 秒";
+											echo $warning;
+										}
+									?>
+								</div>
+							</div>
+						</div>
+
+					</div>	
+				</div>
+				<div class="col-md-2 right_menu">
+					<?php include("rightmenu.html"); ?>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div class="row">
+			<?php include("footer.html"); ?>			
+		</div>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+start...................
+init parametres...............
+Create SQLFactory......................
+Get judgeInfo......................
+JudgeInfo: 1| CodeId:55| Id:1000| lang:1| Code:								#include 
+
+int main()
+{
+int a, b;
+cin >> a >> b;
+cout << a+b << endl;
+return 0;
+}
+Language table done!
+Status table done!
+JudgeResult done!
+Create HrbustJudger......................
+Open file done!
+code0
+Login success!
+Login done!
+Submit start................
+Lang: 2| id:1000| Code:								#include 
+
+int main()
+{
+int a, b;
+cin >> a >> b;
+cout << a+b << endl;
+return 0;
+}
+Url done!
+jumpUrl=&language=2&problem_id=1000&source_code=%09%09%09%09%09%09%09%09%23include%20%0D%0A%0D%0Aint%20main%28%29%0D%0A%7B%0D%0Aint%20a%2C%20b%3B%0D%0Acin%20%3E%3E%20a%20%3E%3E%20b%3B%0D%0Acout%20%3C%3C%20a%2Bb%20%3C%3C%20endl%3B%0D%0Areturn%200%3B%0D%0A%7D
+0
+submit done!
+judge done!
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 
+Result is: 

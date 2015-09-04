@@ -1,0 +1,79 @@
+<html>
+<head>
+	<title>
+		训练场
+	</title>
+	<?php include("header.html"); ?>
+	
+	<script language="Javascript" type="text/javascript" src="public/js/edit_area/edit_area_full.js"></script>
+	<script language="Javascript" type="text/javascript">	
+		editAreaLoader.init({
+			id: "edit_code"	// id of the textarea to transform		
+			,start_highlight: true	// if start with highlight
+			,allow_resize: "both"
+			,allow_toggle: true
+			,word_wrap: true
+			,language: "en"
+			,syntax: "php"	
+		});
+	</script>
+
+</head>
+<body>
+	<div class="container">
+
+		<!-- navigation -->
+		<div class="row">
+			<?php include("navigation.html"); ?>
+		</div>
+
+		<!-- main content -->
+		<div class="row body_wrap">
+			<div class="body_content">
+				<div class="col-md-10 main_body">
+					<div class="submit_problem">
+						<form name="submit_code" role="form" action="<?php echo U('Code','submit')."&pid=".$pid."&type=".$type."&type_id=".$type_id; ?>" method="post">
+							<div class="form-group">
+								<label for="edit_code" class="col-md-12 control-label">Submit Code</label>
+								<div class="col-md-12" style="padding-left:30px;padding-right:30px">
+								<textarea id="edit_code" name="code"  style="height:500px;width:100%;" required>
+								</textarea>
+								</div>
+							</div>
+							<div class="form-group" >
+								<label for="language" class="col-md-1 control-label">Language</label>
+								<div class="row">
+									<div class="col-md-2">
+										<select class="form-control" name="lang">
+											<option value=0>GCC</option>
+											<option value=1>G++</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-2 col-md-offset-3">
+									<button type="submit" class="btn btn-primary btn-block">Submit</button>
+								</div>
+								<div class="col-md-2 col-md-offset-1">
+									<button type="submit" class="btn btn-primary btn-block">Reset</button>
+								</div>
+								<p>
+							</div>
+						</form>
+					</div>	
+				</div>
+				<div class="col-md-2 right_menu">
+					<?php include("rightmenu.html"); ?>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div class="row">
+			<?php include("footer.html"); ?>			
+		</div>
+
+	</div>
+</body>
+</html>

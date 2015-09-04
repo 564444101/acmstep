@@ -1,0 +1,83 @@
+<html>
+<head>
+		<title>
+			admin
+		</title>
+		<?php include("header.html"); ?>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="header">
+				<?php include("navigation.html"); ?>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2 left_menu">
+				<?php include("leftmenu.html"); ?>
+			</div>
+
+			<div class="col-md-10 admin_body">
+				<div class="body_content">
+					<ul class="nav nav-tabs">
+						<li role="presentation">
+							<a href="<?php echo U('Topic','editTopicInfo').'&tid='.$tid; ?>">基本信息</a>
+						</li>
+						<li role="presentation" class="active">
+							<a href="<?php echo U('Topic','editTopicProblem').'&tid='.$tid; ?>">题目信息</a>
+						</li>
+					</ul>
+					<table class="table table-bordered table-striped">
+						<colgroup>
+							<col class="col-md-1">
+							<col class="col-md-8">
+							<col class="col-md-1">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Title</th>
+								<th>Op</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php
+								foreach ($problemlist as $pid => $problemName){
+									$delPath = U('Topic','delTopicProblem')."&tid=".$tid."&pid=".$pid;
+									$col_1 = "<td>".$pid."</td>";
+									$col_2 = "<td>".$problemName."</td>";
+									$col_3 = "<td><a href=".$delPath.">Del</a></td>";
+
+									echo "<tr>".$col_1.$col_2.$col_3."</tr>";
+								}	
+							?>
+							<tr>
+								<form name="addproblem" role="form" action="<?php echo U('Topic','addTopicProblem'); ?>" method="post">	
+									<input type="hidden" name="tid" value="<?php echo $tid; ?>">
+									<td><input type="text" name="problem_id" class="form-control" id="pid"></td>
+									<td><input disabled type="text" name="problem_name" class="form-control" id="pname"></td>
+									<td><button type="submit" class="btn btn-primary" id="bt">添加 Problem</td>
+							</form>
+							</tr>
+						</tbody>
+					</table>	
+				</div>
+			</div>
+
+		</div>
+		<!--footer-->
+		<div class="row">
+			<?php include("footer.html"); ?>
+		</div>
+	</div>
+	<script language="javascript" type="text/javascript" src="public/js/addtopicproblem.js"></script>
+
+	<script language="javascript" type="text/javascript" src="public/editor/kindeditor.js"></script>
+	<script language="javascript" type="text/javascript" src="public/editor/lang/zh_CN.js"></script>                                                 
+	<script>
+		KindEditor.ready(function(K) {
+		window.editor = K.create('#description_edit');
+		});
+	</script>
+</body>
+</html>

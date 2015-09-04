@@ -1,0 +1,141 @@
+<html>
+	<head>
+		<title>
+			登录
+		</title>
+	</head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="public/css/bootstrap.css">
+		<script language="javascript" type="text/javascript" src="public/js/register.js"></script>
+	<body>
+		<div class="container">
+			<div class="header">
+				<div class="wrap row">
+					<div class="col-md-3" style="padding-left:0px;">
+						<img src="public/pic/hr.jpg" class="img-responsive" alt="hrbust">
+					</div>
+					<div class="col-md-3">
+						<a href="<?php echo "index.php"; ?>">入门系统</a>
+					</div>
+				</div>
+			</div>
+			<div class="row loginwrap" style="background-image:url(public/pic/lg3.jpg);">
+				<div class="col-md-4 col-md-offset-7 loginbox">
+					<form class="form-horizontal" role="form" name="loginbox" 
+						action="<?php echo U('User', 'login'); ?>" method="post">
+						<div class="form-group">
+							<label class="col-md-3 control-label"><h3>登录</h3></label>
+						</div>
+						<div class="form-group">
+							<label for="username" class="col-md-3 control-label">用户名:</label>
+							<div class="col-md-8">
+								<input name="username" type="text" class="form-control" placeholder="Username" required>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="password" class="col-md-3 control-label" checked>密码:</label>
+							<div class="col-md-8">
+								<input type="password" name="password" class="form-control" placeholder="Password">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-md-5">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox"> 记住帐号
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-offset-2 col-md-4">
+								<button type="submit" class="btn btn-primary btn-block">登录</button>
+							</div>
+							<div class="col-md-offset-0 col-md-4">
+
+								<button type="button" class="btn btn-primary btn-block" 
+									data-toggle="modal" data-target="#register">快速注册</button>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!--注册框start-->
+		<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="row register_box">
+
+					<form class="form-horizontal" role="form" name="registerbox" 
+						action="<?php echo U('User', 'register'); ?>" method="post">
+						<div class="form-group">
+							<label class="col-md-offset-2 col-md-4 control-label">
+								<h3>注册</h3></label>
+						</div>
+						<hr/>
+						<div class="form-group">
+							<label for="username" class="col-md-2 control-label">用户名
+							</label>
+							<div class="col-md-5">
+								<input type="text" name="username" class="form-control" id="uname" required>
+							</div>
+							<div class="col-md-5" style="padding-top:7px;padding-left:0px;">
+								<span id="name_msg"></span>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-10 col-md-offset-2" style="height:25">
+								<span id="count"></span>
+							</div>
+
+						</div>
+
+						<div class="form-group">
+							<label for="password" class="col-md-2 control-label">密码
+							</label>
+							<div class="col-md-5">
+								<input type="password" name="password" class="form-control" id="passwd" required>
+							</div>
+							<div class="col-md-5" style="padding-top:7px;padding-left:0px;">
+								<span id="passwd_msg" ></span>
+							</div>
+						</div>
+	
+						<div class="form-group">
+							<label for="password2" class="col-md-2 control-label">
+								重复密码
+							</label>
+							<div class="col-md-5">
+								<input disabled="" type="password" name="password2" class="form-control" id="passwd_confirm" required>
+							</div>
+							<div class="col-md-5" style="padding-top:7px;padding-left:0px;">
+								<span id="passwd_confirm_msg"></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-offset-4 col-md-4">
+								<button type="submit" class="btn btn-primary btn-block">
+									注册
+								</button>
+							</div>
+						</div>
+
+					</form>
+
+
+				</div>
+			</div>
+		</div>
+		<!--注册框end-->
+
+
+		<script src="public/js/jquery-1.9.1.min.js"></script>
+		<script language="javascript" type="text/javascript" src="public/js/bootstrap.js"></script>
+	</body>
+</html>

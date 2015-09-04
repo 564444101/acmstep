@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title>
+		训练场
+	</title>
+	<?php include("header.html"); ?>
+</head>
+<body>
+	<div class="container">
+
+		<!-- navigation -->
+		<div class="row">
+			<?php include("navigation.html"); ?>
+		</div>
+
+		<!-- main content -->
+		<div class="row	body_wrap">
+			<div class="body_content">
+				<div class="col-md-10 main_body">
+					<div class="list-group topiclist">
+					<?php
+						foreach ($chaptername as $cid => $cname){
+							 $cBgColor = '#669999';
+							 switch ($chaptertype[$cid]){
+								case 1 : $cBgColor = '#33CC33'; break;
+								case 2 : $cBgColor = '#6699cc'; break;
+								default : $cBgColor = '#a3a3a3';
+							 }
+
+							 $chapterHead = "<div class='list-group-item active' style='border:0;background-color:".$cBgColor."'><a href='#collapse".$cid."'data-toggle='collapse' aria-expanded='false' aria-controls='collapse".$cid."' style='color:white'>Chapter ".$cid."------ ".$chaptername[$cid]."</a></div>";
+							 echo $chapterHead;
+							 echo "<div class='collapse' id='collapse".$cid."'>";
+						     if (!empty($topiclist[$cid])){
+							  foreach ($topiclist[$cid] as $tid => $topicInfo){
+								$tBgColor = '#ccffff';
+								switch ($topictype[$tid]){
+									case 1 : $tBgColor = '#98fb98'; break;
+								    case 2 : $tBgColor = '#96cdcd'; break;
+									default : $tBgColor = '#c0c0c0';
+								}
+								$topicInfoPath = U('Topic','showTopicInfo')."&tid=".$tid;
+							 	$topicline = "<a class='list-group-item' style='background-color:".$tBgColor."' href=".$topicInfoPath.">专题 ".$tid." | ".$topicInfo['topic_name']."</a>";
+								echo $topicline;
+							  }
+							 }
+							 echo "</div>";
+							 echo "<p>";
+						}
+					?>
+					</div>
+				</div>
+				<!-- right menu-->	
+				<div class="col-md-2 right_menu">
+					<?php include("rightmenu.html"); ?>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div class="row">
+			<?php include("footer.html"); ?>			
+		</div>
+
+	</div>
+</body>
+</html>

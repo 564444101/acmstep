@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>
+			登录
+		</title>
+	</head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="public/css/bootstrap.css">
+<body>
+<div class="container">
+	<div class="header">
+		<div class="wrap row">
+			<div class="col-md-3" style="padding-left:0px;">
+			<img src="public/pic/hr.jpg" class="img-responsive" alt="hrbust">
+			</div>
+			<div class="col-md-3">
+				<a href="<?php echo "index.php"; ?>">入门系统</a>
+			</div>
+		</div>
+	</div>
+	<div class="row loginwrap" style="background-image:url(public/pic/lg3.jpg);">
+		<div class="col-md-4 col-md-offset-7 loginbox">
+		<form class="form-horizontal" role="form" name="loginbox" 
+			action="<?php echo U('User', 'login'); ?>" method="post">
+			<div class="form-group">
+				<label class="col-md-3 control-label"><h3>登录</h3></label>
+			</div>
+			<div class="form-group">
+				<label for="username" class="col-md-3 control-label">用户名:</label>
+				<div class="col-md-8">
+				<input name="username" type="text" class="form-control" placeholder="Username" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password" class="col-md-3 control-label" checked>密码:</label>
+				<div class="col-md-8">
+					<input type="password" name="password" class="form-control" placeholder="Password">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-md-5">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> 记住帐号
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-md-4">
+					<button type="submit" class="btn btn-default">登录</button>
+				</div>
+			</div>
+		</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>

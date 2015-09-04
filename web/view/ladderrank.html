@@ -1,0 +1,90 @@
+<html>
+<head>
+	<title>
+		训练场
+	</title>
+	<?php include("header.html"); ?>
+</head>
+<body>
+	<div class="container">
+
+		<!-- navigation -->
+		<div class="row">
+			<?php include("navigation.html"); ?>
+		</div>
+
+		<!-- main content -->
+		<div class="row	body_wrap">
+			<div class="body_content">
+				<div class="col-md-10 main_body">
+					<ul class="nav nav-tabs">
+						<li role="presentation"><a href="<?php echo U('Rank','showTopicRank'); ?>">训练场排名</a></li>
+					    <li role="presentation" class="active" ><a href="<?php echo U('Rank', 'showLadderRank'); ?>">天梯排名</a></li>
+					</ul>
+					<table class="table table-bordered table-striped">
+						<colgroup>
+							<col class="col-md-1">
+							<col class="col-md-2">
+							<col class="col-md-4">
+							<col class="col-md-2">
+							<col class="col-md-1">
+							<col class="col-md-2">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>Rank</th>
+								<th>User</th>
+								<th>Motto</th>
+								<th>Passed Ladder</th>
+								<th>Submit</th>
+								<th>AC Ratio</th>
+							</tr>
+						</thead>
+						<tbody>
+						  <?php
+							foreach ($ranklist as $user){
+							  $col_1 = "<td>".$user['rank']."</td>";  
+							  $col_2 = "<td>".$user['username']."</td>";
+							  $col_3 = "<td>".$user['motto']."</td>";
+							  $col_4 = "<td>".$user['pass_ladder_num']."</td>";
+							  $col_5 = "<td>".$user['submited_times']."</td>";
+							  $col_6 = "<td>".$user['ac_ratio']." %</td>";
+							  echo "<tr>".$col_1.$col_2.$col_3.$col_4.$col_5.$col_6."</tr>";
+							}
+						  ?>
+						</tbody>
+					</table>
+					<nav>       
+					<ul class="pager">
+						<?php 
+							if (true == $hasPre){
+								$prePid = $pid - 1;
+								$prePath = U('Rank','showLadderRank')."&pid=".$prePid;
+								$prepageLine = "<li><a href=".$prePath.">Prev Page</a></li>&nbsp;";
+								echo $prepageLine;
+							}
+							if (true == $hasNext){
+								$nextPid = $pid + 1;
+								$nextPath = U('Rank','showLadderRank')."&pid=".$nextPid;
+								$nextpageLine = "<li><a href=".$nextPath.">Next Page</a></li>";
+								echo $nextpageLine;
+							}
+						?>
+					</ul>
+					</nav>
+				</div>
+				<!-- right menu-->	
+				<div class="col-md-2 right_menu">
+					<?php include("rightmenu.html"); ?>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div class="row">
+			<?php include("footer.html"); ?>			
+		</div>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<div class="menu_content">
+<div class="panel-group" id="accordion" role="tablist" aria-multiselecttable="true">
+	<!--userinfo -->
+	<div class="panel panel-default">
+		<div class="panel-heading" role="tab" id="headingOne">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" href="#collapseOne" 
+					aria-expanded="false" aria-controls="collapseOne">
+					个人信息管理	
+				</a>
+			</h4>
+		</div>
+		<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+			aria-labelledby="headingOne" aria-expanded="true">
+			<ul class="list-group">
+				<li class="list-group-item"><a href="#">修改我的密码</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- users manage-->
+
+	<div class="panel panel-default">
+		<div class="panel-heading" role="tab" id="headingtwo">
+			<h4 class="panel-title">
+				<a data-toggle="collapse"  href="#collapseTwo" 
+					aria-expanded="false" aria-controls="collapseTwo">
+					用户管理
+				</a>
+			</h4>
+		</div>
+		<div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel"
+			aria-labelledby="headingTwo" aria-expanded="true">
+			<ul class="list-group">
+				<li class="list-group-item">
+				<a href="<?php echo U('User','getUserList'); ?>">用户列表</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- problemset-->
+	<div class="panel panel-default">
+		<div class="panel-heading" role="tab" id="headingThree">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" href="#collapseThree" 
+					aria-expanded="false" aria-controls="collapseThree">
+					题库
+				</a>
+			</h4>
+		</div>
+		<div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" 
+			aria-labelledby="headingThree" aria-expanded="true">
+			<ul class="list-group">
+				<li class="list-group-item">
+				<a href="<?php echo U('Problem','showProblemList')."&pid=1"; ?>">题目列表</a>
+				</li>
+				<li class="list-group-item">
+				<a href="<?php echo U('Problem','addProblemPage'); ?>">添加题目</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- topic-->
+	<div class="panel panel-default">
+		<div class="panel-heading" role="tab" id="headingFour">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" href="#collapseFour" 
+					aria-expanded="false" aria-controls="collapseFour">
+					训练场
+				</a>
+			</h4>
+		</div>
+		<div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" 
+			aria-labelledby="headingFour" aria-expanded="true">
+			<ul class="list-group">
+				<li class="list-group-item">
+				<a href="<?php echo U('Topic','showTopicList'); ?>">专题列表</a>
+				</li>
+				<li class="list-group-item">
+				<a href="<?php echo U('Chapter','addChapterPage'); ?>">添加新章节</a>
+				</li>
+				<li class="list-group-item"> 
+				<a href="<?php echo U('Topic','addTopicPage'); ?>">添加新专题</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<!-- ladder-->
+	<div class="panel panel-default">                                                                       
+		<div class="panel-heading" role="tab" id="headingFive">
+			<h4 class="panel-title">
+			<a data-toggle="collapse" href="#collapseFive" 
+				aria-expanded="false" aria-controls="collapseFive">
+				天梯
+			</a>
+			</h4>
+		</div>
+		<div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" 
+			aria-labelledby="headingFive" aria-expanded="true">
+			<ul class="list-group">
+				<li class="list-group-item"><a href="<?php echo U('Ladder','showLadderList'); ?>">天梯关卡列表</a></li>
+				<li class="list-group-item"><a href="<?php echo U('Ladder','addLadderPage'); ?>">增加天梯关卡</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- algorithm study-->
+	<div class="panel panel-default">                                                                       
+		<div class="panel-heading" role="tab" id="headingSix">
+			<h4 class="panel-title">
+			<a data-toggle="collapse" href="#collapseSix" 
+				aria-expanded="false" aria-controls="collapseSix">
+				学习资料
+			</a>
+			</h4>
+		</div>
+		<div id="collapseSix" class="panel-collapse collapse in" role="tabpanel" 
+			aria-labelledby="headingSix" aria-expanded="true">
+			<ul class="list-group">
+				<li class="list-group-item"><a href="#">算法专题列表</a></li>
+				<li class="list-group-item"><a href="#">新算法知识</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<!-- code-->
+	<div class="panel panel-default">                                                                       
+		<div class="panel-heading" role="tab" id="headingSeven">
+			<h4 class="panel-title">
+			<a data-toggle="collapse" href="#collapseSeven" 
+				aria-expanded="false" aria-controls="collapseSeven">
+				重判
+			</a>
+			</h4>
+		</div>
+		<div id="collapseSeven" class="panel-collapse collapse in" role="tabpanel" 
+			aria-labelledby="headingSeven" aria-expanded="true">
+			<ul class="list-group">
+				<li class="list-group-item"><a href="<?php echo U('Code','showRejudgePage'); ?>">代码重判</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+</div>
+</div>

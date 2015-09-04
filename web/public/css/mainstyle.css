@@ -1,0 +1,264 @@
+.header nav{
+	height:43px;
+	background-color:#191970;
+}
+.header nav li{
+	width:12.4%;	
+	max-width:100%;
+}
+.header a{
+	color:white;
+	font-size:16px;
+	text-align:center;
+}
+
+
+.body_wrap{
+	background-color:#ecf5ff;
+}
+
+.body_content{
+    padding-right:0px;
+	min-height: 800px;
+	max-height: 100%;	
+}
+
+.main_body{
+	padding-left:50px;
+	padding-top:25px;
+}
+
+.right_menu{
+	border-left:1px solid;
+	border-color:#5F9EA0;
+	background-color:#c9c9cf;
+}
+
+.menu_content{
+	padding-top:10px;
+	min-height: 800px;
+	max-height: 100%;
+	
+}
+
+.menu_content .list-group-item{
+	line-height:16px;
+	font-size:10px;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:2px;
+	padding-right:2px;
+	background-color:rgba(196,214,242,0.9);
+}
+.li_left{
+	text-align:left;
+}
+.li_right{
+	text-align:right;
+}
+.footer{
+	text-align: right;
+	border-top: 1px solid;  
+	border-color: #C0C0C0;
+	color: #A0C0A0;
+	font-size:10px;
+}
+
+
+#edituser{
+	margin:auto;
+	width:500;
+}
+#edituser .panel-content{
+	padding-top:20;
+	padding-left:5;
+	padding-right:15;
+}
+#edituser label{
+	font-size:10px;	
+}
+#edituser input{
+	height:25;
+}
+#edituser .panel-heading{
+	text-align:center;
+}	
+
+.topiclist span{
+	color:white;
+	display:block;
+	width:300px;
+	height:30px;			
+	padding-top:6px;
+	padding-left:10px;
+	margin-top:10px;
+	margin-bottom:3px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	background-color:rgba(20, 132, 189, 0.9);
+}
+.topiclist .list-group-item{
+	margin-left:60px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	max-width:500px;
+	padding-top:4px;
+	height:30px;
+}
+.topiclist .active{
+	margin-left:50px;
+	padding-top:8px;
+	margin-bottom:3px;
+	width:300px;
+	height:38px;
+}
+
+.probleminfo h4{
+	color: #5891e3;
+}
+
+.probleminfo .problem_content{
+	word-wrap: break-word;
+	word-break:break-all;
+	background-color: rgb(217,217,249);
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	padding-top:12px;
+	padding-bottom:12px;
+	padding-left:10px;
+	padding-right:10px;
+	margin-bottom:22px;
+}
+.tip_box{
+	background-color: rgba(255,250,250,0.8);
+	color: #2F4F4F;
+	width: 120%;
+}
+.tip_box h2{
+	text-align: center;
+	color:#006000;
+}
+.tip_box h3{
+	margin-left:10;
+}
+.tip_content{
+	margin-left:14;
+}
+.tip_box .warning{
+	margin-left:10;
+	color:#EA0000;
+}
+
+.ladderlist .list-group-item{
+	margin-left:60px;
+	background-color:#96cdcd;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	max-width:600px;
+	padding-top:4px;
+	height:30px;
+}
+.ladderlist font{
+	color:#000000;
+}
+.ladderlist .btn-2{
+	background: #cb4e4e;
+	color: #fff;
+	box-shadow: 0 6px #ab3c3c;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+.ladderlist .btn-2a{
+	border-radius: 0 0 5px 5px;
+}
+.ladderlist .btn{
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.ladderlist .btn:after{
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.ladderlist .btn:before{
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+}
+.userinfo{
+}
+.userinfo .title{
+	margin-top:0px;
+	border-top:0px;
+	padding-top:0px;	
+	height:5px;
+}
+.userinfo .headline{
+	margin-bottom:10px;
+}
+.userinfo .infoline{
+	padding:0,0,0,0;
+	height:5px;
+}
+.userinfo .infoleft{
+	text-align:left;
+}
+.userinfo .inforight{
+	text-align:right;
+}
+.userinfo .detail{
+	margin-top:10px;
+	background-color:#e4e5e7;
+	height:210px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	padding-top:5px;
+	padding-left:14px;
+	padding-right:14px;
+}
+.userinfo .panel-heading{
+	padding:2px 2px;	
+	padding-left:5px;
+}
+.userinfo hr{
+	border-top-color: #46a3ff;
+	margin-top:15px;
+	margin-bottom:2px;
+}
+
+

@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>
+	admin
+</title>
+	<?php include("header.html"); ?>				
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="header">
+			<?php include("navigation.html"); ?>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2 left_menu">
+				 <?php include("leftmenu.html"); ?>
+			</div>
+			<div class="col-md-10 admin_body">
+				<div class="body_content">
+					<form name='newtopic' role="form" action="<?php echo U('Chapter','updateChapterName'); ?>" 
+						method="post" style="margin-bottom: 0em;">
+						<div class="row">
+							<div class="col-md-3">
+								<label class="control-label" for="chapter_id">Chapter <?php echo $chapterinfo['cid'];?></label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								<input type="hidden" name="cid" class="form-control"
+								value="<?php echo $chapterinfo['cid']; ?>" required>
+							</div>
+						</div>
+
+
+						<div class="row">
+							<div class="col-md-3">
+								<label class="control-label" for="chapter_name">新名称</label>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-3">
+								<input type="text" name="chapter_name" class="form-control"
+								value="<?php echo $chapterinfo['chapter_name']; ?>" required>
+							</div>
+						</div>
+						<p>
+						<div class="row">
+							<div class="col-md-2">
+								<button type="submit" class="btn btn-primary btn-block">OK</button>
+							</div>
+							<div class="col-md-2">
+								<button type="reset" class="btn btn-primary btn-block">Restet</button>
+							</div>
+						</div>
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--footer-->
+		<div class="row">
+		<?php include("footer.html"); ?>
+		</div>
+	</div>
+</body>
+</html>

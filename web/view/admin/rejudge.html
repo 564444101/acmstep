@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>
+admin
+</title>
+		<?php include("header.html"); ?>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="header">
+			<?php include("navigation.html"); ?>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-2 left_menu">
+				<?php include("leftmenu.html"); ?>
+			</div>
+			<div class="col-md-10 admin_body">
+				<div class="body_content">
+					<form class='form-inline' name="judgebystatus" role='form' action="<?php echo U('Code','rejudge'); ?>" method="post">
+							<input type='hidden' name='judgetype' value='1'>
+							<div class='form-group'>
+								<label for='judge_status' style="min-width:120">指定状态重判  </label>
+								<select name="judge_status" class="form-control" style="min-width:200px;height:30">
+									<option value="4">Accepted</option>
+									<option value="5">Presentation Error</option>
+									<option value="6">Wrong Answer</option>
+									<option value="7">Time Limit Exceeded</option>
+									<option value="8">Memory Limit Exceeded</option>
+									<option value="9">Output Limit Exceeded</option>
+									<option value="10">Runtime Error</option>
+									<option value="11">Compile Error</option>
+								</select>                                           
+							</div>
+							<button type='submit' class='btn btn-primary' style="height:30">GO</button>
+					</form>
+					<form class='form-inline' name="judgebyrunid" role='form' action="<?php echo U('Code','rejudge'); ?>" method="post">
+						<input type='hidden' name='judgetype' value='2'>
+						<div class='form-group'>
+							<label for='code_id' style="min-width:120">指定Run ID重判  </label>
+							<input type='text' name='code_id' class='form-control' style="width:204px;height:30">
+						</div>
+						<button type='submit' class='btn btn-primary' style="height:30">GO</button>
+					</form>
+					<form class='form-inline' name="judgebypid" role='form' action="<?php echo U('Code','rejudge'); ?>" method="post">
+						<input type='hidden' name='judgetype' value='3'>
+						<div class='form-group'>
+							<label for='problem_id' style="min-width:120">指定PID重判  </label>
+							<input type='text' name='problem_id' class='form-control' style="width:204px;height:30">
+						</div>
+						<button type='submit' class='btn btn-primary' style="height:30">GO</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+		<div class="row">
+			<?php include("footer.html"); ?>
+		</div>
+	</div>
+
+</body>
+</html>

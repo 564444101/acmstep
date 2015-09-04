@@ -1,0 +1,54 @@
+.left_menu{
+	
+	border-right: 1px solid;
+	border-color: #C0C0C0;
+	background-color: #333366;
+}
+
+.menu_content{
+	padding-top: 15px;
+	min-height: 900px;
+	max-height: 100%;
+}
+
+.admin_body{
+	background-color: #e8e8e8;
+}
+
+.body_content{
+	padding-top: 25px;
+	min-height: 1000px;
+	max-height: 100%;
+}
+
+.body_content label{
+	padding-top:5px;
+}
+.admin_footer{
+	text-align: right;
+	border-top: 1px solid;	
+	border-color: #C0C0C0;
+	color: #A0C0A0;
+	font-size:10px;
+}
+
+#edituser{
+	margin:auto;
+	width:500;
+}
+#edituser .panel-content{
+	padding-top:20;
+	padding-left:5;
+	padding-right:15;
+}
+#edituser label{
+	font-size:10px;	
+}
+#edituser input{
+	height:25;
+}
+#edituser .panel-heading{
+	text-align:center;
+}	
+
+

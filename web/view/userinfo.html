@@ -1,0 +1,213 @@
+<html>
+<head>
+	<title>
+		训练场
+	</title>
+	<?php include("header.html"); ?>
+</head>
+<body>
+	<div class="container">
+
+		<!-- navigation -->
+		<div class="row">
+			<?php include("navigation.html"); ?>
+		</div>
+
+		<!-- main content -->
+		<div class="row body_wrap">
+			<div class="body_content">
+				<div class="col-md-10 main_body">
+					<div class='userinfo'>
+						<div class='row title'>
+							<div class='col-md-2'>
+							<?php echo $_SESSION['nickname']; ?>	
+							</div>
+							<div class='col-md-10'>
+							<?php echo $userinfo['motto']; ?>
+							</div>
+						</div>
+						<hr/ class='headline'>
+						<div class='row'>
+							<div class='col-md-4'>
+								<div class='row'>
+									<div class='col-md-12'>
+									<img class="img-responsive" src="<?php echo $userinfo['head_photo']; ?>"> 
+									</div>
+								</div>
+								<div class='row infoline'>
+									<div class='col-md-12'>
+										<div class='col-md-6 infoleft'>
+										topic rank
+										</div>
+										<div class='col-md-6 inforight'>
+											<?php echo $userinfo['topic_rank']; ?>
+										</div>
+									</div>
+								</div>
+								<hr/>
+								<div class='row infoline'>
+									<div class='col-md-12'>
+										<div class='col-md-6 infoleft'>
+											ladder rank
+										</div>
+										<div class='col-md-6 inforight'>
+											<?php echo $userinfo['ladder_rank']; ?>
+										</div>
+									</div>
+								</div>
+								<hr/>
+								<div class='row infoline'>
+									<div class='col-md-12'>
+										<div class='col-md-8 infoleft'>
+										problems solved
+										</div>
+										<div class='col-md-4 inforight'>
+										<?php echo $userinfo['topic_solved_times']+$userinfo['ladder_solved_times']; ?>
+										</div>
+									</div>
+								</div>
+								<hr/>
+								<div class='row infoline'>
+									<div class='col-md-12'>
+										<div class='col-md-8 infoleft'>
+											problems submited
+										</div>
+										<div class='col-md-4 inforight'>
+										<?php echo $userinfo['topic_submited_times']+$userinfo['ladder_submited_times']; ?>
+										</div>
+									</div>
+								</div>
+								<hr/>
+								<div class='detail'>
+									<div class='row infoline'>
+										<div class='col-md-5 infoleft'>
+											User Name
+										</div>
+										<div class='col-md-7 inforight'>
+											<?php echo $userinfo['username']; ?>
+										</div>
+									</div>
+									<div class='row infoline'>
+										<div class='col-md-5 infoleft'>
+											Register Time
+										</div>
+										<div class='col-md-7 inforight'>
+											<?php echo $userinfo['register_time']; ?>
+										</div>
+									</div>
+
+									<div class='row infoline'>
+										<div class='col-md-2 infoleft'>
+											School
+										</div>
+										<div class='col-md-10 inforight'>
+											<?php echo $userinfo['school']; ?>
+										</div>
+									</div>
+									<div class='row infoline'>
+										<div class='col-md-2 infoleft'>
+											Major
+										</div>
+										<div class='col-md-10 inforight'>
+											<?php echo $userinfo['major']; ?>
+										</div>
+									</div>
+									<div class='row infoline'>
+										<div class='col-md-2 infoleft'>
+											Class
+										</div>
+										<div class='col-md-10 inforight'>
+											<?php echo $userinfo['class']; ?>
+										</div>
+									</div>
+									<div class='row infoline'>
+										<div class='col-md-5 infoleft'>
+											Real Name
+										</div>
+										<div class='col-md-7 inforight'>
+											<?php echo $userinfo['realname']; ?>
+										</div>
+									</div>
+									<div class='row infoline'>
+										<div class='col-md-2 infoleft'>
+											Gender
+										</div>
+										<div class='col-md-10 inforight'>
+											<?php echo $userinfo['sex']; ?>
+										</div>
+									</div>
+									<div class='row infoline'>
+										<div class='col-md-2 infoleft'>
+											Age
+										</div>
+										<div class='col-md-10 inforight'>
+											<?php echo $userinfo['age']; ?>
+										</div>
+									</div>
+									<div class='row infoline'>
+										<div class='col-md-2 infoleft'>
+											Email
+										</div>
+										<div class='col-md-10 inforight'>
+											<?php echo $userinfo['email']; ?>
+										</div>
+									</div>
+									<div class='row infoline'>
+										<div class='col-md-2 infoleft'>
+											QQ
+										</div>
+										<div class='col-md-10 inforight'>
+											<?php echo $userinfo['qq']; ?>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class='col-md-8'>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										Topic Solved Problems
+									</div>
+									<div class="panel-body">
+									 <?php 
+										foreach ($topicsolved as $topicId => $problems){
+											foreach ($problems as $problemid){
+												echo $topicId."-".$problemid." ";
+											}
+										}
+									 ?>
+									 </div>
+								 </div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										Topic Unsolved Problems
+									</div>
+									<div class="panel-body">
+										<?php 
+										foreach ($topicunsolved as $topicId => $problems){
+											foreach ($problems as $problemid){
+												echo $topicId."-".$problemid." ";
+											}
+										}
+										?>
+									 </div>
+								 </div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2 right_menu">
+					<?php include("rightmenu.html"); ?>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div class="row">
+			<?php include("footer.html"); ?>			
+		</div>
+
+	</div>
+</body>
+</html>

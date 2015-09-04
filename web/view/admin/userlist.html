@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>
+	admin
+</title>
+	<?php include("header.html"); ?>
+</head>
+<body>
+	<div class="container">
+		<div class="row">	
+			<div class="header">
+				<?php include("navigation.html"); ?>
+			</div>
+		</div>
+		<div class="row"> 
+			<div class="col-md-2 left_menu">
+				<?php include("leftmenu.html"); ?>
+			</div>
+
+			<div class="col-md-10 admin_body">
+				<div class="body_content">
+					<table class="table table-bordered table-striped"> 
+					<colgroup>
+						<col class="col-md-2">
+						<col class="col-md-4">
+						<col class="col-md-3">
+						<col class="col-md-1">
+						<col class="col-md-2">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>User name</th>
+							<th>Nick name</th>		
+							<th>Register Time</th>
+							<th>Type</th>
+							<th>Op</th>
+						</tr>
+					</thead>
+					<tbody>
+					<?php
+					//dump($userRows);
+					foreach ( $userRows['rows'] as $user){
+					  $modifyPath = U('User','editUser')."&uid=".$user['user_id'];
+					  $delPath = U('User','delUser')."&uid=".$user['user_id'];
+
+					  $col_1 = "<td>".$user['username']."</td>";
+					  $col_2 = "<td>".$user['nickname']."</td>";
+					  $col_3 = "<td>".$user['register_time']."</td>";
+					  $col_4 = "<td>".($user['user_type']=='1'?'admin':'user')."</td>";
+					  $col_5 = "<td><a href=".$modifyPath.">Modify</a> / <a href=".$delPath.
+							   ">Del</a></td>";
+					  echo "<tr>".$col_1.$col_2.$col_3.$col_4.$col_5."</tr>";
+					}
+					?>
+					</tbody>
+					</table>	
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+		<div class="row">
+			<?php include("footer.html"); ?>
+		</div>
+	</div>
+</body>
+</html>

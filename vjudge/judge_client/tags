@@ -1,0 +1,176 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BUFFER_SIZE	./vjudge.h	34;"	d
+DB_NAME	./vjudge.h	32;"	d
+DECODE_HTML_ENTITIES_UTF8	./entities.h	2;"	d
+GLOBAL_HEADER	./global.h	2;"	d
+HDU	./vjudge.h	26;"	d
+HDUJUDGER_HEADER	./HDUJudger.h	2;"	d
+HDUJudger	./HDUJudger.cpp	/^HDUJudger::HDUJudger(JudgeInfo info)$/;"	f	class:HDUJudger
+HDUJudger	./HDUJudger.h	/^class HDUJudger: public VirtualJudger {$/;"	c
+HOST_NAME	./vjudge.h	29;"	d
+HRBUST	./vjudge.h	25;"	d
+HRBUSTJUDGER_HEADER	./HRBUSTJudger.h	2;"	d
+HRBUSTJudger	./HRBUSTJudger.cpp	/^HRBUSTJudger::HRBUSTJudger(JudgeInfo info)$/;"	f	class:HRBUSTJudger
+HRBUSTJudger	./HRBUSTJudger.h	/^class HRBUSTJudger : public VirtualJudger {$/;"	c
+JUDGEINFO_HEADER	./JudgeInfo.h	2;"	d
+JUDGERRESULT_HEADER	./JudgeResult.h	2;"	d
+JudgeInfo	./JudgeInfo.h	/^		JudgeInfo(int _oj = HRBUST, int _id = 1000, int _maxWaitTime = 0, int _lang = 0, int _submitTime = 0, string _code = "", int _userId = 0, int _codeId = 0, int _type = 0, int _type_id = 0):oj(_oj), id(_id), maxWaitTime(_maxWaitTime), lang(_lang), submitTime(_submitTime), code(_code), user_id(_userId), code_id(_codeId), type(_type), type_id(_type_id) {}$/;"	f	class:JudgeInfo
+JudgeInfo	./JudgeInfo.h	/^class JudgeInfo {$/;"	c
+JudgeResult	./JudgeResult.h	/^class JudgeResult {$/;"	c
+LADDER	./vjudge.h	37;"	d
+OJ_AC	./vjudge.h	43;"	d
+OJ_CE	./vjudge.h	50;"	d
+OJ_CI	./vjudge.h	41;"	d
+OJ_ML	./vjudge.h	47;"	d
+OJ_OL	./vjudge.h	48;"	d
+OJ_PE	./vjudge.h	44;"	d
+OJ_RE	./vjudge.h	49;"	d
+OJ_RI	./vjudge.h	42;"	d
+OJ_TL	./vjudge.h	46;"	d
+OJ_WA	./vjudge.h	45;"	d
+OJ_WT0	./vjudge.h	39;"	d
+OJ_WT1	./vjudge.h	40;"	d
+PASSWORD	./vjudge.h	31;"	d
+POJ	./vjudge.h	27;"	d
+SQLFACTORY_HEADER	./SQLFactory.h	2;"	d
+SQLFactory	./SQLFactory.cpp	/^SQLFactory::SQLFactory(string hostName = "localhost", string user="root", string password="vj123456", string dbName="acmstep", int maxWaitTime=0, int codeId=1000):hostName(hostName), user(user), password(password), dbName(dbName), maxWaitTime(maxWaitTime), code_id(codeId){$/;"	f	class:SQLFactory
+SQLFactory	./SQLFactory.h	/^class SQLFactory {$/;"	c
+TOPIC	./vjudge.h	36;"	d
+USER_NAME	./vjudge.h	30;"	d
+VIRTUALJUDGER_HEADER	./VirtualJudger.h	2;"	d
+VirtualJudger	./VirtualJudger.cpp	/^VirtualJudger::VirtualJudger() {$/;"	f	class:VirtualJudger
+VirtualJudger	./VirtualJudger.h	/^class VirtualJudger {$/;"	c
+_COMMON_H_	./vjudge.h	2;"	d
+charset_convert	./global.cpp	/^void charset_convert(const char * from_charset, const char * to_charset, char * inbuf, size_t inlen, char * outbuf, size_t outlen) {$/;"	f
+closeFile	./VirtualJudger.cpp	/^void VirtualJudger::closeFile() {$/;"	f	class:VirtualJudger
+code	./JudgeInfo.h	/^		string code;$/;"	m	class:JudgeInfo
+code	./VirtualJudger.h	/^		CURLcode code;$/;"	m	class:VirtualJudger
+codeId	./JudgeInfo.h	/^		int codeId;$/;"	m	class:JudgeInfo
+codeId	./JudgeResult.h	/^		int codeId;$/;"	m	class:JudgeResult
+code_id	./JudgeInfo.h	/^		int code_id;$/;"	m	class:JudgeInfo
+code_id	./SQLFactory.h	/^		int code_id;$/;"	m	class:SQLFactory
+connection	./SQLFactory.h	/^		MYSQL* connection;$/;"	m	class:SQLFactory
+convertResult	./HDUJudger.cpp	/^string HDUJudger::convertResult(string result) {$/;"	f	class:HDUJudger
+convertResult	./HRBUSTJudger.cpp	/^string HRBUSTJudger::convertResult(string result) {$/;"	f	class:HRBUSTJudger
+curl_file	./VirtualJudger.h	/^		FILE *curl_file;$/;"	m	class:VirtualJudger
+dbName	./SQLFactory.h	/^		string dbName;$/;"	m	class:SQLFactory
+dec2hexChar	./global.cpp	/^char dec2hexChar(short int n) {$/;"	f
+easy_handle	./VirtualJudger.h	/^		CURL *easy_handle;$/;"	m	class:VirtualJudger
+errorInfo	./JudgeResult.h	/^		string errorInfo;$/;"	m	class:JudgeResult
+escapeURL	./global.cpp	/^string escapeURL(const string &URL) {$/;"	f
+fileToString	./global.cpp	/^string fileToString(string filename)$/;"	f
+fileToString2	./global.cpp	/^string fileToString2(char* filename)$/;"	f
+getCEinfo	./HDUJudger.cpp	/^string HDUJudger::getCEinfo() {$/;"	f	class:HDUJudger
+getCEinfo	./HRBUSTJudger.cpp	/^string HRBUSTJudger::getCEinfo() {$/;"	f	class:HRBUSTJudger
+getCode	./JudgeInfo.h	/^		string getCode() {$/;"	f	class:JudgeInfo
+getCodeId	./JudgeInfo.h	/^		int getCodeId() {$/;"	f	class:JudgeInfo
+getCodeId	./JudgeResult.h	/^		int getCodeId() {$/;"	f	class:JudgeResult
+getConnect	./SQLFactory.h	/^		MYSQL* getConnect() {$/;"	f	class:SQLFactory
+getDbName	./SQLFactory.h	/^		string getDbName() {$/;"	f	class:SQLFactory
+getErrorInfo	./JudgeResult.h	/^		string getErrorInfo() {$/;"	f	class:JudgeResult
+getHostName	./SQLFactory.h	/^		string getHostName() {$/;"	f	class:SQLFactory
+getId	./JudgeInfo.h	/^		int getId() const {$/;"	f	class:JudgeInfo
+getJudgeInfoById	./SQLFactory.cpp	/^JudgeInfo SQLFactory::getJudgeInfoById(int id) {$/;"	f	class:SQLFactory
+getJudgeResult	./VirtualJudger.cpp	/^JudgeResult VirtualJudger::getJudgeResult()$/;"	f	class:VirtualJudger
+getJudgeStatus	./JudgeResult.h	/^		int getJudgeStatus() {$/;"	f	class:JudgeResult
+getLang	./JudgeInfo.h	/^		int getLang() {$/;"	f	class:JudgeInfo
+getMaxWaitTime	./JudgeInfo.h	/^		int getMaxWaitTime() const {$/;"	f	class:JudgeInfo
+getMaxWaitTime	./SQLFactory.h	/^		int getMaxWaitTime() {$/;"	f	class:SQLFactory
+getOj	./JudgeInfo.h	/^		int getOj() const {$/;"	f	class:JudgeInfo
+getPassword	./SQLFactory.h	/^		string getPassword() {$/;"	f	class:SQLFactory
+getRunId	./JudgeResult.h	/^		int getRunId() {$/;"	f	class:JudgeResult
+getRunMemory	./JudgeResult.h	/^		int getRunMemory() {$/;"	f	class:JudgeResult
+getRunTime	./JudgeResult.h	/^		int getRunTime() {$/;"	f	class:JudgeResult
+getStatus	./HDUJudger.cpp	/^void HDUJudger::getStatus() {$/;"	f	class:HDUJudger
+getStatus	./HRBUSTJudger.cpp	/^void HRBUSTJudger::getStatus() {$/;"	f	class:HRBUSTJudger
+getSubmitTime	./JudgeInfo.h	/^		int getSubmitTime() {$/;"	f	class:JudgeInfo
+getType	./JudgeInfo.h	/^		int getType() {$/;"	f	class:JudgeInfo
+getTypeId	./JudgeInfo.h	/^		int getTypeId() {$/;"	f	class:JudgeInfo
+getUser	./SQLFactory.h	/^		string getUser() {$/;"	f	class:SQLFactory
+getUserId	./JudgeInfo.h	/^		int getUserId() {$/;"	f	class:JudgeInfo
+hostName	./SQLFactory.h	/^		string hostName;$/;"	m	class:SQLFactory
+id	./JudgeInfo.h	/^		int id;$/;"	m	class:JudgeInfo
+init	./SQLFactory.cpp	/^void SQLFactory::init() {$/;"	f	class:SQLFactory
+init_parameters	./vjudge_client.cpp	/^void init_parameters(int argc, char **argv) {$/;"	f
+insert_tip	./SQLFactory.cpp	/^void SQLFactory::insert_tip(const string &problem_id) {$/;"	f	class:SQLFactory
+isFinalResult	./VirtualJudger.cpp	/^bool VirtualJudger::isFinalResult(string result)$/;"	f	class:VirtualJudger
+isLogin	./VirtualJudger.h	/^		bool isLogin;$/;"	m	class:VirtualJudger
+judge	./VirtualJudger.cpp	/^void VirtualJudger::judge() {$/;"	f	class:VirtualJudger
+judgeInfo	./VirtualJudger.h	/^		JudgeInfo judgeInfo;$/;"	m	class:VirtualJudger
+judgeResult	./VirtualJudger.h	/^		JudgeResult judgeResult;$/;"	m	class:VirtualJudger
+judgeStatus	./JudgeResult.h	/^		int judgeStatus;$/;"	m	class:JudgeResult
+judge_topic	./SQLFactory.cpp	/^bool SQLFactory::judge_topic() {$/;"	f	class:SQLFactory
+lang	./JudgeInfo.h	/^		int lang;$/;"	m	class:JudgeInfo
+language_table	./VirtualJudger.h	/^		map<int, string> language_table;$/;"	m	class:VirtualJudger
+login	./HDUJudger.cpp	/^void HDUJudger::login() {$/;"	f	class:HDUJudger
+login	./HRBUSTJudger.cpp	/^void HRBUSTJudger::login() {$/;"	f	class:HRBUSTJudger
+main	./test.cpp	/^int main()$/;"	f
+main	./vjudge_client.cpp	/^int main(int argc, char **argv)$/;"	f
+main	./zztest.cpp	/^int main(){$/;"	f
+maxWaitTime	./JudgeInfo.h	/^		int maxWaitTime;$/;"	m	class:JudgeInfo
+maxWaitTime	./SQLFactory.h	/^		int maxWaitTime;$/;"	m	class:SQLFactory
+mysql_add_one	./SQLFactory.cpp	/^void SQLFactory::mysql_add_one(const char *table, const char *filed, const char *key, int value) {$/;"	f	class:SQLFactory
+mysql_select	./SQLFactory.cpp	/^void SQLFactory::mysql_select(char *sql, vector<string> &result) {$/;"	f	class:SQLFactory
+mysql_select	./SQLFactory.cpp	/^void SQLFactory::mysql_select(char *sql, vector<string> &result, int n) {$/;"	f	class:SQLFactory
+oj	./JudgeInfo.h	/^		int oj;$/;"	m	class:JudgeInfo
+password	./SQLFactory.h	/^		string password;$/;"	m	class:SQLFactory
+performCurl	./VirtualJudger.cpp	/^void VirtualJudger::performCurl() {$/;"	f	class:VirtualJudger
+prepareCurl	./VirtualJudger.cpp	/^void VirtualJudger::prepareCurl() {$/;"	f	class:VirtualJudger
+run	./VirtualJudger.cpp	/^void VirtualJudger::run() {$/;"	f	class:VirtualJudger
+runId	./JudgeResult.h	/^		int runId;$/;"	m	class:JudgeResult
+runMemory	./JudgeResult.h	/^		int runMemory;$/;"	m	class:JudgeResult
+runTime	./JudgeResult.h	/^		int runTime;$/;"	m	class:JudgeResult
+setCode	./JudgeInfo.h	/^		void setCode(string code) {$/;"	f	class:JudgeInfo
+setCodeId	./JudgeInfo.h	/^		void setCodeId(int codeId) {$/;"	f	class:JudgeInfo
+setCodeId	./JudgeResult.h	/^		void setCodeId(int codeId) {$/;"	f	class:JudgeResult
+setCodeId	./SQLFactory.h	/^		void setCodeId(int codeId) {$/;"	f	class:SQLFactory
+setDbName	./SQLFactory.h	/^		void setDbName(string _dbName) {$/;"	f	class:SQLFactory
+setErrorInfo	./JudgeResult.h	/^		void setErrorInfo(string errorInfo) {$/;"	f	class:JudgeResult
+setHostName	./SQLFactory.h	/^		void setHostName(string _hostName) {$/;"	f	class:SQLFactory
+setId	./JudgeInfo.h	/^		void setId(int id) {$/;"	f	class:JudgeInfo
+setJudgeStatus	./JudgeResult.h	/^		void setJudgeStatus(int judgeStatus) {$/;"	f	class:JudgeResult
+setLang	./JudgeInfo.h	/^		void setLang(int lang) {$/;"	f	class:JudgeInfo
+setMaxWaitTime	./JudgeInfo.h	/^		void setMaxWaitTime(int maxWaitTime) {$/;"	f	class:JudgeInfo
+setMaxWaitTime	./SQLFactory.h	/^		void setMaxWaitTime(int _maxWaitTime) {$/;"	f	class:SQLFactory
+setOj	./JudgeInfo.h	/^		void setOj(int oj) {$/;"	f	class:JudgeInfo
+setPassword	./SQLFactory.h	/^		void setPassword(string _password) {$/;"	f	class:SQLFactory
+setRunId	./JudgeResult.h	/^		void setRunId(int runId) {$/;"	f	class:JudgeResult
+setRunMemory	./JudgeResult.h	/^		void setRunMemory(int runMemory) {$/;"	f	class:JudgeResult
+setRunTime	./JudgeResult.h	/^		void setRunTime(int runTime) {$/;"	f	class:JudgeResult
+setSubmitTime	./JudgeInfo.h	/^		void setSubmitTime(int submitTime) {$/;"	f	class:JudgeInfo
+setType	./JudgeInfo.h	/^		void setType(int type) {$/;"	f	class:JudgeInfo
+setType	./SQLFactory.h	/^		void setType(int type) {$/;"	f	class:SQLFactory
+setTypeId	./JudgeInfo.h	/^		void setTypeId(int typeId) {$/;"	f	class:JudgeInfo
+setTypeId	./SQLFactory.h	/^		void setTypeId(int typeId) {$/;"	f	class:SQLFactory
+setUser	./SQLFactory.h	/^		void setUser(string _user) {$/;"	f	class:SQLFactory
+setUserId	./JudgeInfo.h	/^		void setUserId(int userId) {$/;"	f	class:JudgeInfo
+setUserId	./SQLFactory.h	/^		void setUserId(int userId) {$/;"	f	class:SQLFactory
+solution_id	./vjudge_client.cpp	/^static int solution_id;$/;"	v	file:
+split	./global.cpp	/^vector<string> split(string str, char c) {$/;"	f
+status_table	./VirtualJudger.h	/^		map<string, int> status_table;$/;"	m	class:VirtualJudger
+submit	./HDUJudger.cpp	/^void HDUJudger::submit() {$/;"	f	class:HDUJudger
+submit	./HRBUSTJudger.cpp	/^void HRBUSTJudger::submit() {$/;"	f	class:HRBUSTJudger
+submitTime	./JudgeInfo.h	/^		int submitTime;$/;"	m	class:JudgeInfo
+toLowerCase	./global.cpp	/^string toLowerCase(string str) {$/;"	f
+trim	./global.cpp	/^string trim(string str) {$/;"	f
+type	./JudgeInfo.h	/^		int type;$/;"	m	class:JudgeInfo
+type	./SQLFactory.h	/^		int type;$/;"	m	class:SQLFactory
+type_id	./JudgeInfo.h	/^		int type_id;$/;"	m	class:JudgeInfo
+type_id	./SQLFactory.h	/^		int type_id;$/;"	m	class:SQLFactory
+updateInfoByResult	./SQLFactory.cpp	/^void SQLFactory::updateInfoByResult(JudgeResult judgeResult, JudgeInfo judgeInfo) {$/;"	f	class:SQLFactory
+updateJudgeResult	./SQLFactory.cpp	/^void SQLFactory::updateJudgeResult(JudgeResult judgeResult, JudgeInfo judgeInfo) {$/;"	f	class:SQLFactory
+update_ladder	./SQLFactory.cpp	/^void SQLFactory::update_ladder() {$/;"	f	class:SQLFactory
+update_topic	./SQLFactory.cpp	/^void SQLFactory::update_topic() {$/;"	f	class:SQLFactory
+user	./SQLFactory.h	/^		string user;$/;"	m	class:SQLFactory
+user_id	./JudgeInfo.h	/^		int user_id;$/;"	m	class:JudgeInfo
+user_id	./SQLFactory.h	/^		int user_id;$/;"	m	class:SQLFactory
+work_dir	./vjudge_client.cpp	/^static char work_dir[BUFFER_SIZE];$/;"	v	file:
+~HDUJudger	./HDUJudger.cpp	/^HDUJudger::~HDUJudger() {$/;"	f	class:HDUJudger
+~HRBUSTJudger	./HRBUSTJudger.cpp	/^HRBUSTJudger::~HRBUSTJudger() {$/;"	f	class:HRBUSTJudger
+~JudgeInfo	./JudgeInfo.h	/^		virtual ~JudgeInfo() {$/;"	f	class:JudgeInfo
+~SQLFactory	./SQLFactory.cpp	/^SQLFactory::~SQLFactory() {$/;"	f	class:SQLFactory

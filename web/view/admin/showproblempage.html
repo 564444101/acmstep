@@ -1,0 +1,11 @@
+<form name="input" action="<?php echo U('Problem', 'editProblem').'&pid='.$problemInfo['problem_id']; ?>" method="post">
+	<br>problem_name: <input type="text" name="problem_name"/ value="<?php echo $problemInfo['problem_name']?>"> </br>
+	<br>description: <input type="text" name="description"/ value="<?php echo $problemInfo['description']?>" > </br>
+	<br>input:<input type="text" name="input" value="<?php echo $problemInfo['input']?>"/></br>
+	<br>output:<input type="text" name="output" value="<?php echo $problemInfo['output']?>" /></br>
+	<br>sample_input: <input type="text" name="sample_input" value="<?php echo $problemInfo['sample_input']?>" /></br>
+	<br>sample_output: <input type="text" name="sample_output" value="<?php echo $problemInfo['sample_output']?>" /></br>
+	<br>hint:<input type="text" name="hint" value="<?php echo $problemInfo['hint']?>"/></br>
+	<input type="submit" value="edit" />
+</form>
+

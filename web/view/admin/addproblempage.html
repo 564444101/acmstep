@@ -1,0 +1,178 @@
+<html>
+<head>
+		<title>
+			admin
+		</title>
+		<?php include("header.html"); ?>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="header">
+				<?php include("navigation.html"); ?>
+			</div>
+		</div>
+		<div class="row">
+		  <div class="col-md-2 left_menu">
+			 <?php include("leftmenu.html"); ?>
+		  </div>
+		  <div class="col-md-10 admin_body">
+			<div class="body_content">	
+				<form name="newproblem" role="form" action="<?php echo U('Problem','addProblem'); ?>"
+					method="post" enctype="multipart/form-data">
+				    <div class="form-group">
+					 <label for="problem_name" class="col-md-12 control-label">Title</label>
+					 <div class="col-md-3">
+					 <input type="text" name="problem_name" class="form-control" placeholder="title">
+					 </div>
+					</div>
+
+				    <div class="form-group">
+					 <label for="problem_id" class="col-md-12 control-label">Problem ID</label>
+					 <div class="col-md-3">
+						 <input type="text" name="problem_id" class="form-control" 
+						 placeholder="problem ID" required>
+					 </div>
+					</div>
+
+				    <div class="form-group">
+					 <label for="time_limit" class="col-md-12 control-label">Time Limit(ms)</label>
+					 <div class="col-md-3">
+						 <input type="text" name="time_limit" class="form-control" 
+						 value="1000" required>
+					 </div>
+					</div>
+
+					<div class="form-group">
+					 <label for="memory_limit" class="col-md-12 control-label">Memory Limit(k)</label>
+					 <div class="col-md-3">
+						 <input type="text" name="time_limit" class="form-control" 
+						 value="32" required>
+					 </div>
+					</div>
+
+					<div class="form-group">
+					 <label for="memory_limit" class="col-md-12 control-label">Is Inner Problem</label>
+					 <div class="col-md-3">
+						 <select name='is_inner' class="form-control">
+							 <option value='1' selected>Yes</option>
+							 <option value='0'>No</option>
+						 </select>
+					 </div>
+					</div>
+
+					<div class="form-group">
+					 <label for="memory_limit" class="col-md-12 control-label">Outer Oj Name</label>
+					 <div class="col-md-3">
+						 <select name='oj_id' class="form-control">
+							 <option value='1' selected>Hrbust Oj</option>
+							 <option value='2'>HDU Oj</option>
+						 </select>
+					 </div>
+					</div>
+
+					<div class="form-group">
+					 <label for="memory_limit" class="col-md-12 control-label">Outer Oj Problem Id</label>
+					 <div class="col-md-3">
+						 <input type='text' name='outer_oj_pid' class='form-control'>
+					 </div>
+					</div>
+
+					<div class="form-group">
+						<label for="inputfile" class="col-md-12 control-label">Input Data</label>
+						<div class="col-md-7">
+						<input type="file" name="inputfile">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="outputfile" class="col-md-12 control-label">Output Data</label>
+						<div class="col-md-7">
+						<input type="file" name="outputfile">
+						</div>
+					</div>
+
+					<div class="form-group">
+					 <label for="description" class="col-md-12 control-label">Description</label>
+					 <div class="col-md-12">
+						<textarea id="description_edit" name="description" rows="6" cols="95">
+						</textarea>
+					 </div>
+					</div>
+					
+					<div class="form-group">
+					 <label for="input" class="col-md-12 control-label">Input</label>
+					 <div class="col-md-12">
+						<textarea id="input_edit" name="input" rows="6" cols="95">
+						</textarea>
+					 </div>
+					</div>
+
+					<div class="form-group">
+					 <label for="output" class="col-md-12 control-label">Output</label>
+					 <div class="col-md-12">
+						<textarea id="output_edit" name="output" rows="6" cols="95">
+						</textarea>
+					 </div>
+					</div>
+
+					<div class="form-group">
+					 <label for="sample_input" class="col-md-12 control-label">Sample Input</label>
+					 <div class="col-md-12">
+						<textarea id="sample_input_edit" name="sample_input" rows="6" cols="95">
+						</textarea>
+					 </div>
+					</div>
+
+					<div class="form-group">
+					 <label for="sample_output" class="col-md-12 control-label">Sample Output</label>
+					 <div class="col-md-12">
+						<textarea id="sample_output_edit" name="sample_output" rows="6" cols="95">
+						</textarea>
+					 </div>
+					</div>
+
+					<div class="form-group">
+					 <label for="hint" class="col-md-12 control-label">Hint</label>
+					 <div class="col-md-12">
+						<textarea id="hint_edit" name="hint" rows="6" cols="95">
+						</textarea>
+					 </div>
+					</div>
+
+					<div class="form-group">
+					 <div class="col-md-1 col-md-offset-1">
+						 <button type="submit" class="btn btn-default">OK</button>
+					 </div>
+					</div>
+
+					<div class="form-group">
+					 <div class="col-md-1">
+						 <button type="reset" class="btn btn-default">Reset</button>
+					 </div>
+					</div>
+			</form>
+			</div>
+		</div>
+		</div>
+		<!--footer-->
+		<div class="row">
+			<?php include("footer.html"); ?>
+		</div>
+	</div>
+    <script language="javascript" type="text/javascript" src="public/editor/kindeditor.js"></script>
+    <script language="javascript" type="text/javascript" src="public/editor/lang/zh_CN.js"></script>
+	<script>
+		KindEditor.ready(function(K) {
+			window.editor = K.create('#description_edit');
+			window.editor = K.create('#input_edit');
+			window.editor = K.create('#output_edit');
+			window.editor = K.create('#sample_input_edit');
+			window.editor = K.create('#sample_output_edit');
+			window.editor = K.create('#hint_edit');
+		});
+
+	</script>
+
+</body>
+</html>

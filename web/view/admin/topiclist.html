@@ -1,0 +1,56 @@
+<html>
+<head>
+		<title>
+			admin
+		</title>
+		<?php include("header.html"); ?>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="header">
+				<?php include("navigation.html"); ?>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2 left_menu">
+				<?php include("leftmenu.html"); ?>
+			</div>
+			<div class="col-md-10 admin_body"> 
+				<div class="body_content">
+				<?php 
+				foreach ($chaptername as $cid => $cname){
+
+					$editChapterPath = U('Chapter','editChapter')."&cid=".$cid;
+				    echo "<ul class='list-group'>";
+					echo "<li class='list-group-item-heading'>";
+					echo "<div class='row'>";
+					echo "<div class='col-md-10'>Chapter ".$cid."---- ".$cname."</div>";
+					echo "<div class='col-md-2'><a href=".$editChapterPath.">edit chapter name</a></div>";
+					echo "</div></li>";
+					   if (!empty($topiclist[$cid])){
+				    	foreach ($topiclist[$cid] as $tid => $topicInfo){
+							$editPath = U('Topic','editTopicInfo')."&tid=".$tid;
+							$delPath = U('Topic','delTopic')."&tid=".$tid;
+							echo "<li class='list-group-item'>";
+							echo "<div class='row'>";
+								echo "<div class='col-md-1'>".$tid."</div><div class='col-md-9'>".$topicInfo['topic_name']."</div>";
+								echo "<div class='col-md-2'><a href=".$editPath.">Edit</a> / <a href=".$delPath.">Del</a></div>";
+							echo "</div>";
+							echo "</li>";
+					    }
+					    echo "<p>";
+					  }
+					}
+				?>
+
+				</div>
+			</div>
+		</div>
+		<!--footer-->
+		<div class="row">
+			<?php include("footer.html"); ?>
+		</div>
+	</div>
+</body>
+</html>

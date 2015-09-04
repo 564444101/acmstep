@@ -1,0 +1,49 @@
+<?php
+	class ProblemController extends Controller {
+
+		public addProblem() {
+			if(!isset($_SESSION['username'])) {
+				$this->display('loginpage');
+				return;
+			}
+			if(isset($_SESSION['user_type']) && $_SESSION['user_type'] != 1) {
+				echo 'user_type is wrong';
+				return;
+			}
+			$problemModel = M('Problem');
+
+			$pid = $problemMode->addProblem($_POST);
+			if($pid === FALSE) {
+				echo 'add problem failed';
+			}
+			else {
+				$problemInfo = $problemMode->getProblemInfo($pid);
+				var_dump($problemInfo);
+			}
+		}
+
+		public delProblem() {
+			if(!isset($_SESSION['username'])) {
+				$this->display('loginpage');
+				return;
+			}
+			if(isset($_SESSION['user_type']) && $_SESSION['user_type'] != 1) {
+				echo 'user_type is wrong';
+				return;
+			}
+			$problemModel = M('Problem');
+		}
+
+		public editProblem() {
+
+		}
+
+		public showProblem() {
+
+		}
+
+		public showProblemList() {
+
+		}
+	}
+?>

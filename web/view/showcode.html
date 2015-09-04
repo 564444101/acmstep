@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>
+		训练场
+	</title>
+	<?php include("header.html"); ?>
+	<link href='public/css/prettify.css' type='text/css' rel='stylesheet'/>
+</head>
+<body onload="prettyPrint()">
+	<div class="container">
+
+		<!-- navigation -->
+		<div class="row">
+			<?php include("navigation.html"); ?>
+		</div>
+
+		<!-- main content -->
+		<div class="row body_wrap">
+			<div class="body_content">
+				<div class="col-md-10 main_body">
+					<pre class="prettyprint">
+					<?php
+						echo $codeinfo['code'];
+					?>
+					</pre>
+				</div>
+				<div class="col-md-2 right_menu">
+					<?php include("rightmenu.html"); ?>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div class="row">
+			<?php include("footer.html"); ?>			
+		</div>
+
+	</div>
+	<script type='text/javascript' src='public/js/prettify.js'></script>
+</body>
+</html>

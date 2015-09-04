@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>
+admin
+</title>
+		<?php include("header.html"); ?>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="header">
+			<?php include("navigation.html"); ?>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-2 left_menu">
+				<?php include("leftmenu.html"); ?>
+			</div>
+			<div class="col-md-10 admin_body">
+				<div class="body_content">
+				<table class="table table-hover">
+				<colgroup>
+					<col class="col-md-1">
+					<col class="col-md-8">
+					<col class="col-md-1">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Title</th>
+						<th>Op</th>
+					</tr>
+				</thead>
+				<tbody>
+				<?php
+					foreach ($ladderlist as $ladder){
+					 $editPath = U('Ladder','editLadder')."&lid=".$ladder['ladder_id'];
+					 $delPath = U('Ladder','delLadder')."&lid=".$ladder['ladder_id'];
+
+					 $col_1 = "<td>".$ladder['ladder_id']."</td>";
+					 $col_2 = "<td>".$ladder['ladder_name']."</td>";
+					 $col_3 = "<td><a href=".$editPath.">Edit</a> / <a href=".$delPath.">Del</a></td>";
+
+					 echo "<tr>".$col_1.$col_2.$col_3."</tr>";
+					}
+			    ?>
+				</tbody>
+				</table>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+		<div class="row">
+			<?php include("footer.html"); ?>
+		</div>
+	</div>
+
+</body>
+</html>

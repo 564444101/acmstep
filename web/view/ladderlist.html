@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>
+		训练场
+	</title>
+	<?php include("header.html"); ?>
+</head>
+<body>
+	<div class="container">
+
+		<!-- navigation -->
+		<div class="row">
+			<?php include("navigation.html"); ?>
+		</div>
+
+		<!-- main content -->
+		<div class="row	body_wrap">
+			<div class="body_content">
+				<div class="col-md-10 main_body">
+					<div class="list-group ladderlist">
+						<?php
+							foreach ($ladderNames as $lid => $ladderName){
+							  $problemPath = U('Problem','showProblem')."&type=1&type_id=".$lid;
+							  $line = "<a href=".$problemPath." class='list-group-item'><font>第 ".$lid." 层:&nbsp;&nbsp;".$ladderName."</font></a>";
+							  echo $line;
+							}
+						?>
+					</div>
+				</div>
+				<!-- right menu-->	
+				<div class="col-md-2 right_menu">
+					<?php include("rightmenu.html"); ?>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div class="row">
+			<?php include("footer.html"); ?>			
+		</div>
+
+	</div>
+</body>
+</html>
